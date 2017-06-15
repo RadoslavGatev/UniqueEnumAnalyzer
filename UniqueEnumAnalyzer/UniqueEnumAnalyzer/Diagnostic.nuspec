@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>UniqueEnumAnalyzer</id>
+    <version>1.0.0.0</version>
+    <title>UniqueEnumAnalyzer</title>
+    <authors>Radoslav Gatev</authors>
+    <owners>SolvSoftware RadoslavGatev</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>An analyzer helping for keeping your enum values unique.</description>
+    <releaseNotes>Initial implementation of the Unique enum Analyzer.</releaseNotes>
+    <tags>UniqueEnumAnalyzer, analyzers</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" targetFramework="" />
+    </frameworkAssemblies>
+    <developmentDependency>true</developmentDependency>
+  </metadata>
+  <!-- The convention for analyzers is to put language agnostic dlls in analyzers\portable50 and language specific analyzers in either analyzers\portable50\cs or analyzers\portable50\vb -->
+  <files>
+    <file src="*.dll" target="analyzers\dotnet\cs" exclude="**\Microsoft.CodeAnalysis.*;**\System.Collections.Immutable.*;**\System.Reflection.Metadata.*;**\System.Composition.*" />
+    <file src="tools\*.ps1" target="tools\" />
+  </files>
+</package>
